@@ -4,107 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL AMIN - UI/UX & Product Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-        }
-        .container {
-            width: 85%;
-            max-width: 1000px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
         }
-        .section {
-            margin-bottom: 30px;
+
+        header {
+            background: #0a192f;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #0a192f;
+        }
+
         ul {
-            padding-left: 20px;
+            list-style: none;
+            padding-left: 0;
         }
+
+        li {
+            margin-bottom: 10px;
+        }
+
         a {
-            color: #007acc;
+            color: #0077cc;
             text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .skills, .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span, .languages span {
+            background: #e0f0ff;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            width: calc(33.333% - 13.33px);
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .portfolio-item a {
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-item {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-<div class="container">
+
+<header>
     <h1>AL AMIN</h1>
-    <h3>UI/UX & Product Designer (Microsoft Certified)</h3>
-    <p><strong>Age:</strong> 32 (Born 16 October, 1992)</p>
-    <p><strong>Address:</strong> Mirpur 2, Dhaka</p>
-    <p><strong>Email:</strong> <a href="mailto:alaminip@gmail.com">alaminip@gmail.com</a></p>
-    <p><strong>Phone:</strong> 01711431549</p>
+    <p>UI/UX & Product Designer (Microsoft Certified)</p>
+    <p>Email: <a href="mailto:alaminip@gmail.com" style="color: #66ccff;">alaminip@gmail.com</a> | Phone: 01711431549</p>
+</header>
 
-    <div class="section">
+<div class="container">
+    <section>
         <h2>Profile</h2>
-        <p>Over 10 years of experience in the UI & UX industry, worked on projects including the #1 job portal in Bangladesh — <strong>Bdjobs.com</strong>. Currently working as UI/UX & Product Designer (Team Lead) at <strong>Bangladesh Online (BOL)</strong>.</p>
-    </div>
+        <p>UI/UX & Product Designer with 10+ years of experience, including at Bdjobs.com and Upay. Passionate about clean, functional design and user-centered products. Currently leading design at Bangladesh Online (BOL).</p>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Education</h2>
         <ul>
-            <li><strong>BSc in CSE</strong> - Dhaka International University (2014 - 2018)</li>
-            <li><strong>Diploma in Electrical Engineering</strong> - Model Polytechnic Institute (2009 - 2013), CGPA: 3.84</li>
+            <li><strong>BSc in CSE</strong> – Dhaka International University (2014–2018)</li>
+            <li><strong>Diploma in Electrical Engineering</strong> – Model Polytechnic Institute (2009–2013), CGPA: 3.84</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>Employment History</h2>
+    <section>
+        <h2>Employment</h2>
         <ul>
-            <li><strong>UI/UX & Product Designer (Team Lead)</strong> – Bangladesh Online (BOL), Aug 2022 – Present</li>
-            <li><strong>UI & UX Designer</strong> – Upay (UCB Fintech Ltd.), Jan 2022 – Jul 2022</li>
-            <li><strong>Lead UI & UX Designer</strong> – Bdjobs.com, Jul 2014 – Jan 2022</li>
-            <li><strong>Web Designer</strong> – JoomShaper, Oct 2013 – Jun 2014</li>
+            <li><strong>Bangladesh Online (BOL)</strong> – UI/UX Team Lead (2022 – Present)</li>
+            <li><strong>Upay (UCB Fintech Ltd.)</strong> – UI/UX Designer (2022)</li>
+            <li><strong>Bdjobs.com</strong> – Lead UI/UX Designer (2014 – 2022)</li>
+            <li><strong>JoomShaper</strong> – Junior Web Designer (2013 – 2014)</li>
         </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Certifications</h2>
-        <p><strong>Microsoft UX Design Specialization</strong> – <a href="https://www.coursera.org/account/accomplishments/specialization/GQZQ53WK7BLO" target="_blank">View Certificate</a></p>
-    </div>
+        <p><a href="https://www.coursera.org/account/accomplishments/specialization/GQZQ53WK7BLO" target="_blank">Microsoft UX Design Specialization (Coursera)</a></p>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Skills</h2>
-        <ul>
-            <li>UX Engineering, UI Design, UX Research, Product Design</li>
-            <li>React JS, React Native, HTML5, CSS3, JavaScript, JQuery</li>
-        </ul>
-    </div>
+        <div class="skills">
+            <span>UI Design</span>
+            <span>UX Research</span>
+            <span>Product Design</span>
+            <span>React JS</span>
+            <span>React Native</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>JQuery</span>
+        </div>
+    </section>
 
-    <div class="section">
+    <section>
         <h2>Languages</h2>
-        <p>Bengali, English</p>
-    </div>
+        <div class="languages">
+            <span>Bengali</span>
+            <span>English</span>
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>Other Activities</h2>
-        <ul>
-            <li><a href="https://dribbble.com/alaminmir" target="_blank">Dribbble Portfolio</a></li>
-            <li><a href="https://www.linkedin.com/in/alamin-mir-572a8958/" target="_blank">LinkedIn Profile</a></li>
-        </ul>
-    </div>
+    <section>
+        <h2>Portfolio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <a href="https://dribbble.com/alaminmir" target="_blank">
+                    <img src="https://cdn.dribbble.com/users/123456/screenshots/0000001/media/sample1.png" alt="Portfolio 1">
+                    Dribbble Work 1
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://dribbble.com/alaminmir" target="_blank">
+                    <img src="https://cdn.dribbble.com/users/123456/screenshots/0000002/media/sample2.png" alt="Portfolio 2">
+                    Dribbble Work 2
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://dribbble.com/alaminmir" target="_blank">
+                    <img src="https://cdn.dribbble.com/users/123456/screenshots/0000003/media/sample3.png" alt="Portfolio 3">
+                    Dribbble Work 3
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>Interests</h2>
-        <p>Football, Cricket</p>
-    </div>
-
-    <div class="section">
+    <section>
         <h2>References</h2>
         <ul>
-            <li><strong>Kazi Latifur Rahman</strong> – Bdjobs.com<br>Email: probal@bdjobs.com, Phone: +8801711816767</li>
-            <li><strong>SK. Mohtasim Billah</strong> – MetLife Bangladesh<br>Email: polinaust87@gmail.com, Phone: +8801719296759</li>
+            <li><strong>Kazi Latifur Rahman</strong> – Bdjobs.com<br>Email: probal@bdjobs.com | Phone: +8801711816767</li>
+            <li><strong>SK. Mohtasim Billah</strong> – MetLife Bangladesh<br>Email: polinaust87@gmail.com | Phone: +8801719296759</li>
         </ul>
-    </div>
+    </section>
 </div>
+
 </body>
 </html>
